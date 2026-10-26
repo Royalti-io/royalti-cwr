@@ -1,0 +1,379 @@
+record	id	name	start	size	fmt	req	lookup	implied	block	change	status	source
+HDR	recordType	Record Type	1	3	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+HDR	senderType	Sender Type	4	2	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+HDR	senderId	Sender ID	6	9	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+HDR	senderName	Sender Name	15	45	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+HDR	ediStandardVersionNumber	EDI Standard Version Number	60	5	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+HDR	creationDate	Creation Date	65	8	D	M			base	same	ok	cisac/cwr-functional-spec-2-2
+HDR	creationTime	Creation Time	73	6	T	M			base	same	ok	cisac/cwr-functional-spec-2-2
+HDR	transmissionDate	Transmission Date	79	8	D	M			base	same	ok	cisac/cwr-functional-spec-2-2
+HDR	characterSet	Character Set	87	15	L	O			2.1	same	ok	cisac/cwr-functional-spec-2-2
+HDR	version	Version	102	3	A	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+HDR	revision	Revision	105	3	N	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+HDR	softwarePackage	Software Package	108	30	A	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+HDR	softwarePackageVersion	Software Package Version	138	30	A	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+GRH	recordType	Record Type	1	3	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+GRH	transactionType	Transaction Type	4	3	L	M	transactionType		base	same	ok	cisac/cwr-functional-spec-2-2
+GRH	groupId	Group ID	7	5	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+GRH	versionNumberForThisTransactionType	Version Number for this transaction type	12	5	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+GRH	batchRequest	Batch request	17	10	N	O			base	same	ok	cisac/cwr-functional-spec-2-2
+GRH	submissionDistributionType	Submission/Distribution type	27	2	L	C			base	same	ok	cisac/cwr-functional-spec-2-2
+GRT	recordType	Record Type	1	3	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+GRT	groupId	Group ID	4	5	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+GRT	transactionCount	Transaction Count	9	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+GRT	recordCount	Record Count	17	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+GRT	currencyIndicator	Currency indicator	25	3	L	C	iso4217		base	same	ok	cisac/cwr-functional-spec-2-2
+GRT	totalMonetaryValue	Total monetary value	28	10	N	O			base	same	ok	cisac/cwr-functional-spec-2-2
+TRL	recordType	Record Type	1	3	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+TRL	groupCount	Group Count	4	5	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+TRL	transactionCount	Transaction Count	9	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+TRL	recordCount	Record Count	17	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	submitterAgreementNumber	Submitter Agreement Number	20	14	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	internationalStandardAgreementCode	International Standard Agreement Code	34	14	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	agreementType	Agreement Type	48	2	L	M	agreementType		base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	agreementStartDate	Agreement Start Date	50	8	D	M			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	agreementEndDate	Agreement End Date	58	8	D	O			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	retentionEndDate	Retention End Date	66	8	D	O			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	priorRoyaltyStatus	Prior Royalty Status	74	1	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	priorRoyaltyStartDate	Prior Royalty Start Date	75	8	D	C			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	postTermCollectionStatus	Post-term Collection Status	83	1	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	postTermCollectionEndDate	Post-term Collection End Date	84	8	D	C			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	dateOfSignatureOfAgreement	Date of Signature of Agreement	92	8	D	O			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	numberOfWorks	Number of Works	100	5	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	salesManufactureClause	Sales/Manufacture Clause	105	1	L	C			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	sharesChange	Shares change	106	1	B	O			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	advanceGiven	Advance Given	107	1	B	O			base	same	ok	cisac/cwr-functional-spec-2-2
+AGR	societyAssignedAgreementNumber	Society-assigned Agreement Number	108	14	A	O			2.1	same	ok	cisac/cwr-functional-spec-2-2
+NWR	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	workTitle	Work Title	20	60	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	languageCode	Language Code	80	2	L	O	languageCode		base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	submitterWorkNumber	Submitter Work #	82	14	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	iswc	ISWC	96	11	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	copyrightDate	Copyright Date	107	8	D	O			base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	copyrightNumber	Copyright Number	115	12	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	musicalWorkDistributionCategory	Musical Work Distribution Category	127	3	L	M	musicalWorkDistributionCategory		base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	duration	Duration	130	6	T	C			base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	recordedIndicator	Recorded Indicator	136	1	F	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	textMusicRelationship	Text Music Relationship	137	3	L	O	textMusicRelationship		base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	compositeType	Composite Type	140	3	L	O	compositeType		base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	versionType	Version Type	143	3	L	M	versionType		base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	excerptType	Excerpt Type	146	3	L	O	excerptType		base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	musicArrangement	Music Arrangement	149	3	L	C	musicArrangement		base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	lyricAdaptation	Lyric Adaptation	152	3	L	C	lyricAdaptation		base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	contactName	Contact Name	155	30	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	contactId	Contact ID	185	10	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	cwrWorkType	CWR Work Type	195	2	L	O	cwrWorkType		base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	grandRightsInd	Grand Rights Ind	197	1	B	C			base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	compositeComponentCount	Composite Component Count	198	3	N	C			base	same	ok	cisac/cwr-functional-spec-2-2
+NWR	dateOfPublicationOfPrintedEdition	Date of publication of printed edition	201	8	D	O			society	same	ok	cisac/cwr-functional-spec-2-2
+NWR	exceptionalClause	Exceptional Clause	209	1	F	O			society	same	ok	cisac/cwr-functional-spec-2-2
+NWR	opusNumber	Opus Number	210	25	A	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+NWR	catalogueNumber	Catalogue Number	235	25	A	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+NWR	priorityFlag	Priority Flag	260	1	F	O			2.1	same	ok	cisac/cwr-functional-spec-2-2
+ACK	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+ACK	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+ACK	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+ACK	creationDate	Creation Date	20	8	D	M			base	same	ok	cisac/cwr-functional-spec-2-2
+ACK	creationTime	Creation Time	28	6	T	M			base	same	ok	cisac/cwr-functional-spec-2-2
+ACK	originalGroupId	Original Group ID	34	5	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+ACK	originalTransactionSequenceNumber	Original Transaction Sequence #	39	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+ACK	originalTransactionType	Original Transaction Type	47	3	L	M			base	same	ok	cisac/cwr-functional-spec-2-2
+ACK	creationTitle	Creation Title	50	60	A	C			base	same	ok	cisac/cwr-functional-spec-2-2
+ACK	submitterCreationNumber	Submitter Creation #	110	20	A	C			base	same	ok	cisac/cwr-functional-spec-2-2
+ACK	recipientCreationNumber	Recipient Creation #	130	20	A	C			base	same	ok	cisac/cwr-functional-spec-2-2
+ACK	processingDate	Processing Date	150	8	D	M			base	same	ok	cisac/cwr-functional-spec-2-2
+ACK	transactionStatus	Transaction Status	158	2	L	M	transactionStatus		base	same	ok	cisac/cwr-functional-spec-2-2
+TER	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+TER	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+TER	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+TER	inclusionExclusionIndicator	Inclusion/Exclusion Indicator	20	1	L	M	inclusionExclusionIndicator		base	same	ok	cisac/cwr-functional-spec-2-2
+TER	tisNumericCode	TIS Numeric Code	21	4	L	M	tis		base	same	ok	cisac/cwr-functional-spec-2-2
+IPA	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+IPA	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+IPA	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+IPA	agreementRoleCode	Agreement Role Code	20	2	L	M	agreementRoleCode		base	same	ok	cisac/cwr-functional-spec-2-2
+IPA	interestedPartyIpiNameNumber	Interested Party IPI Name #	22	11	L	O			base	same	ok	cisac/cwr-functional-spec-2-2
+IPA	ipiBaseNumber	IPI Base Number	33	13	L	O			base	same	ok	cisac/cwr-functional-spec-2-2
+IPA	interestedPartyNumber	Interested Party #	46	9	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+IPA	interestedPartyLastName	Interested Party Last Name	55	45	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+IPA	interestedPartyWriterFirstName	Interested Party Writer First Name	100	30	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+IPA	prAffiliationSociety	PR Affiliation Society	130	3	L	C	societyCode		base	same	ok	cisac/cwr-functional-spec-2-2
+IPA	prShare	PR Share	133	5	N	C		999v99	base	same	ok	cisac/cwr-functional-spec-2-2
+IPA	mrAffiliationSociety	MR Affiliation Society	138	3	L	C	societyCode		base	same	ok	cisac/cwr-functional-spec-2-2
+IPA	mrShare	MR Share	141	5	N	C		999v99	base	same	ok	cisac/cwr-functional-spec-2-2
+IPA	srAffiliationSociety	SR Affiliation Society	146	3	L	C	societyCode		base	same	ok	cisac/cwr-functional-spec-2-2
+IPA	srShare	SR Share	149	5	N	C		999v99	base	same	ok	cisac/cwr-functional-spec-2-2
+NPA	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+NPA	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NPA	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NPA	interestedPartyNumber	Interested Party #	20	9	A	C			base	same	ok	cisac/cwr-functional-spec-2-2
+NPA	interestedPartyName	Interested Party Name	29	160	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NPA	interestedPartyWriterFirstName	Interested Party Writer First Name	189	160	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NPA	languageCode	Language Code	349	2	L	O	languageCode		base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	publisherSequenceNumber	Publisher Sequence #	20	2	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	interestedPartyNumber	Interested Party #	22	9	A	C			base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	publisherName	Publisher Name	31	45	A	C			base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	publisherUnknownIndicator	Publisher Unknown Indicator	76	1	F	C			base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	publisherType	Publisher Type	77	2	L	C	publisherType		base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	taxIdNumber	Tax ID #	79	9	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	publisherIpiNameNumber	Publisher IPI Name #	88	11	L	C			base	changed	ok	cisac/cwr-functional-spec-2-2
+SPU	submitterAgreementNumber	Submitter Agreement Number	99	14	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	prAffiliationSocietyNumber	PR Affiliation Society #	113	3	L	C	societyCode		base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	prOwnershipShare	PR Ownership Share	116	5	N	C		999v99	base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	mrSociety	MR Society	121	3	L	C	societyCode		base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	mrOwnershipShare	MR Ownership Share	124	5	N	C		999v99	base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	srSociety	SR Society	129	3	L	C	societyCode		base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	srOwnershipShare	SR Ownership Share	132	5	N	C		999v99	base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	specialAgreementsIndicator	Special Agreements Indicator	137	1	L	O	specialAgreementIndicator		base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	firstRecordingRefusalInd	First Recording Refusal Ind	138	1	F	O			base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	filler	Filler	139	1	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+SPU	publisherIpiBaseNumber	Publisher IPI Base Number	140	13	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+SPU	internationalStandardAgreementCode	International Standard Agreement Code	153	14	A	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+SPU	societyAssignedAgreementNumber	Society-assigned Agreement Number	167	14	A	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+SPU	agreementType	Agreement Type	181	2	L	O	agreementType		2.1	same	ok	cisac/cwr-functional-spec-2-2
+SPU	usaLicenseInd	USA License Ind	183	1	L	O	usaLicenseIndicator		2.1	same	ok	cisac/cwr-functional-spec-2-2
+NPN	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+NPN	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NPN	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NPN	publisherSequenceNumber	Publisher Sequence #	20	2	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NPN	interestedPartyNumber	Interested Party #	22	9	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NPN	publisherName	Publisher Name	31	480	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NPN	languageCode	Language Code	511	2	L	O	languageCode		base	same	ok	cisac/cwr-functional-spec-2-2
+SPT	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+SPT	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+SPT	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+SPT	interestedPartyNumber	Interested Party #	20	9	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+SPT	constant	Constant	29	6	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+SPT	prCollectionShare	PR Collection Share	35	5	N	C		999v99	base	same	ok	cisac/cwr-functional-spec-2-2
+SPT	mrCollectionShare	MR Collection Share	40	5	N	C		999v99	base	same	ok	cisac/cwr-functional-spec-2-2
+SPT	srCollectionShare	SR Collection Share	45	5	N	C		999v99	base	same	ok	cisac/cwr-functional-spec-2-2
+SPT	inclusionExclusionIndicator	Inclusion/Exclusion Indicator	50	1	L	M	inclusionExclusionIndicator		2.0	same	ok	cisac/cwr-functional-spec-2-2
+SPT	tisNumericCode	TIS Numeric Code	51	4	L	M	tis		2.0	same	ok	cisac/cwr-functional-spec-2-2
+SPT	sharesChange	Shares change	55	1	B	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+SPT	sequenceNumber	Sequence #	56	3	N	M			2.1	same	ok	cisac/cwr-functional-spec-2-2
+SWR	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	interestedPartyNumber	Interested Party #	20	9	A	C			base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	writerLastName	Writer Last Name	29	45	A	C			base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	writerFirstName	Writer First Name	74	30	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	writerUnknownIndicator	Writer Unknown Indicator	104	1	F	C			base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	writerDesignationCode	Writer Designation Code	105	2	L	C	writerDesignation		base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	taxIdNumber	Tax ID #	107	9	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	writerIpiNameNumber	Writer IPI Name #	116	11	L	O			base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	prAffiliationSocietyNumber	PR Affiliation Society #	127	3	L	O	societyCode		base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	prOwnershipShare	PR Ownership Share	130	5	N	O		999v99	base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	mrSociety	MR Society	135	3	L	O	societyCode		base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	mrOwnershipShare	MR Ownership Share	138	5	N	O		999v99	base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	srSociety	SR Society	143	3	L	O	societyCode		base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	srOwnershipShare	SR Ownership Share	146	5	N	O		999v99	base	same	ok	cisac/cwr-functional-spec-2-2
+SWR	reversionaryIndicator	Reversionary Indicator	151	1	F	O			society	same	ok	cisac/cwr-functional-spec-2-2
+SWR	firstRecordingRefusalInd	First Recording Refusal Ind	152	1	B	O			society	same	ok	cisac/cwr-functional-spec-2-2
+SWR	workForHireIndicator	Work For Hire Indicator	153	1	B	O			society	same	ok	cisac/cwr-functional-spec-2-2
+SWR	filler	Filler	154	1	A	O			society	same	ok	cisac/cwr-functional-spec-2-2
+SWR	writerIpiBaseNumber	Writer IPI Base Number	155	13	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+SWR	personalNumber	Personal Number	168	12	N	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+SWR	usaLicenseInd	USA License Ind.	180	1	L	O	usaLicenseIndicator		2.1	same	ok	cisac/cwr-functional-spec-2-2
+NWN	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+NWN	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NWN	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NWN	interestedPartyNumber	Interested Party #	20	9	A	C			base	same	ok	cisac/cwr-functional-spec-2-2
+NWN	writerLastName	Writer Last Name	29	160	A	M			base	same	ambiguous	cisac/cwr-functional-spec-2-2
+NWN	writerFirstName	Writer First Name	189	160	A	O			base	same	ambiguous	cisac/cwr-functional-spec-2-2
+NWN	languageCode	Language Code	349	2	L	O	languageCode		base	same	ok	cisac/cwr-functional-spec-2-2
+SWT	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+SWT	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+SWT	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+SWT	interestedPartyNumber	Interested Party #	20	9	A	C			base	changed	ok	cisac/cwr-functional-spec-2-2
+SWT	prCollectionShare	PR Collection Share	29	5	N	O		999v99	base	same	ok	cisac/cwr-functional-spec-2-2
+SWT	mrCollectionShare	MR Collection Share	34	5	N	O		999v99	base	same	ok	cisac/cwr-functional-spec-2-2
+SWT	srCollectionShare	SR Collection Share	39	5	N	O		999v99	base	same	ok	cisac/cwr-functional-spec-2-2
+SWT	inclusionExclusionIndicator	Inclusion/Exclusion Indicator	44	1	L	M	inclusionExclusionIndicator		base	same	ok	cisac/cwr-functional-spec-2-2
+SWT	tisNumericCode	TIS Numeric Code	45	4	L	M	tis		base	same	ok	cisac/cwr-functional-spec-2-2
+SWT	sharesChange	Shares change	49	1	B	O			base	same	ok	cisac/cwr-functional-spec-2-2
+SWT	sequenceNumber	Sequence #	50	3	N	M			2.1	same	ok	cisac/cwr-functional-spec-2-2
+PWR	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+PWR	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+PWR	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+PWR	publisherIpNumber	Publisher IP #	20	9	A	C			base	changed	ok	cisac/cwr-functional-spec-2-2
+PWR	publisherName	Publisher Name	29	45	A	C			base	changed	ok	cisac/cwr-functional-spec-2-2
+PWR	submitterAgreementNumber	Submitter Agreement Number	74	14	A	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+PWR	societyAssignedAgreementNumber	Society-Assigned Agreement Number	88	14	A	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+PWR	writerIpNumber	Writer IP #	102	9	A	C			2.1	changed	ok	cisac/cwr-functional-spec-2-2
+PWR	publisherSequenceNumber	Publisher Sequence #	111	2	N	M			2.2	new	ok	cisac/cwr-functional-spec-2-2
+ALT	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+ALT	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+ALT	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+ALT	alternateTitle	Alternate Title	20	60	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+ALT	titleType	Title Type	80	2	L	M	titleType		base	same	ok	cisac/cwr-functional-spec-2-2
+ALT	languageCode	Language Code	82	2	L	C	languageCode		base	same	ok	cisac/cwr-functional-spec-2-2
+NAT	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+NAT	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NAT	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NAT	title	Title	20	640	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NAT	titleType	Title Type	660	2	L	M	titleType		base	same	ok	cisac/cwr-functional-spec-2-2
+NAT	languageCode	Language Code	662	2	L	O	languageCode		base	same	ok	cisac/cwr-functional-spec-2-2
+EWT	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+EWT	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+EWT	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+EWT	entireWorkTitle	Entire Work Title	20	60	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+EWT	iswcOfEntireWork	ISWC of Entire Work	80	11	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+EWT	languageCode	Language Code	91	2	L	O	languageCode		base	same	ok	cisac/cwr-functional-spec-2-2
+EWT	writer1LastName	Writer 1 Last Name	93	45	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+EWT	writer1FirstName	Writer 1 First Name	138	30	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+EWT	source	Source	168	60	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+EWT	writer1IpiNameNumber	Writer 1 IPI Name #	228	11	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+EWT	writer1IpiBaseNumber	Writer 1 IPI Base Number	239	13	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+EWT	writer2LastName	Writer 2 Last Name	252	45	A	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+EWT	writer2FirstName	Writer 2 First Name	297	30	A	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+EWT	writer2IpiNameNumber	Writer 2 IPI Name #	327	11	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+EWT	writer2IpiBaseNumber	Writer 2 IPI Base Number	338	13	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+EWT	submitterWorkNumber	Submitter Work #	351	14	A	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+VER	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+VER	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+VER	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+VER	originalWorkTitle	Original Work Title	20	60	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+VER	iswcOfOriginalWork	ISWC of Original Work	80	11	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+VER	languageCode	Language Code	91	2	L	O	languageCode		base	same	ok	cisac/cwr-functional-spec-2-2
+VER	writer1LastName	Writer 1 Last Name	93	45	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+VER	writer1FirstName	Writer 1 First Name	138	30	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+VER	source	Source	168	60	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+VER	writer1IpiNameNumber	Writer 1 IPI Name #	228	11	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+VER	writer1IpiBaseNumber	Writer 1 IPI Base Number	239	13	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+VER	writer2LastName	Writer 2 Last Name	252	45	A	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+VER	writer2FirstName	Writer 2 First Name	297	30	A	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+VER	writer2IpiNameNumber	Writer 2 IPI Name #	327	11	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+VER	writer2IpiBaseNumber	Writer 2 IPI Base Number	338	13	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+VER	submitterWorkNumber	Submitter Work #	351	14	A	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+PER	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+PER	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+PER	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+PER	performingArtistLastName	Performing Artist Last Name	20	45	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+PER	performingArtistFirstName	Performing Artist First Name	65	30	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+PER	performingArtistIpiNameNumber	Performing Artist IPI Name #	95	11	L	O			base	same	ok	cisac/cwr-functional-spec-2-2
+PER	performingArtistIpiBaseNumber	Performing Artist IPI Base Number	106	13	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+NPR	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+NPR	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NPR	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NPR	performingArtistName	Performing Artist Name	20	160	A	C			base	same	ok	cisac/cwr-functional-spec-2-2
+NPR	performingArtistFirstName	Performing Artist First Name	180	160	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+NPR	performingArtistIpiNameNumber	Performing Artist IPI Name #	340	11	L	O			base	same	ok	cisac/cwr-functional-spec-2-2
+NPR	performingArtistIpiBaseNumber	Performing Artist IPI Base Number	351	13	L	O			base	same	ok	cisac/cwr-functional-spec-2-2
+NPR	languageCode	Language Code	364	2	L	O	languageCode		base	same	ok	cisac/cwr-functional-spec-2-2
+NPR	performanceLanguage	Performance Language	366	2	L	C	languageCode		2.1	same	ok	cisac/cwr-functional-spec-2-2
+NPR	performanceDialect	Performance Dialect	368	3	L	C			2.1	same	ok	cisac/cwr-functional-spec-2-2
+REC	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+REC	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+REC	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+REC	firstReleaseDate	Release Date	20	8	D	O			base	renamed	ok	cisac/cwr-functional-spec-2-2
+REC	constant28	Constant	28	60	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+REC	firstReleaseDuration	Release Duration	88	6	T	O			base	renamed	ok	cisac/cwr-functional-spec-2-2
+REC	constant94	Constant	94	5	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+REC	firstAlbumTitle	Album Title	99	60	A	O			2.0	renamed	ok	cisac/cwr-functional-spec-2-2
+REC	firstAlbumLabel	Album Label	159	60	A	O			2.0	renamed	ok	cisac/cwr-functional-spec-2-2
+REC	firstReleaseCatalogNumber	Release Catalog #	219	18	A	O			2.0	renamed	ok	cisac/cwr-functional-spec-2-2
+REC	ean	EAN	237	13	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+REC	isrc	ISRC	250	12	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+REC	recordingFormat	Recording Format	262	1	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+REC	recordingTechnique	Recording Technique	263	1	L	O	recordingTechnique		2.0	same	ok	cisac/cwr-functional-spec-2-2
+REC	mediaType	Media Type	264	3	L	O	mediaType		2.1	same	ok	cisac/cwr-functional-spec-2-2
+REC	recordingTitle	Recording Title	267	60	A	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+REC	versionTitle	Version Title	327	60	A	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+REC	displayArtist	Display Artist	387	60	A	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+REC	recordLabel	Record Label	447	60	A	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+REC	isrcValidity	ISRC Validity	507	20	L	C	isrcValidity		2.2	new	ambiguous	cisac/cwr-functional-spec-2-2
+REC	submitterRecordingIdentifier	Submitter Recording Identifier	527	14	A	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+ORN	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+ORN	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+ORN	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+ORN	intendedPurpose	Intended Purpose	20	3	L	M	intendedPurpose		base	same	ok	cisac/cwr-functional-spec-2-2
+ORN	productionTitle	Production Title	23	60	A	C			base	same	ok	cisac/cwr-functional-spec-2-2
+ORN	cdIdentifier	CD Identifier	83	15	A	C			base	same	ok	cisac/cwr-functional-spec-2-2
+ORN	cutNumber	Cut Number	98	4	N	O			base	same	ok	cisac/cwr-functional-spec-2-2
+ORN	library	Library	102	60	A	C			2.1	same	ok	cisac/cwr-functional-spec-2-2
+ORN	bltvr	BLTVR	162	1	A	O			2.1	same	ok	cisac/cwr-functional-spec-2-2
+ORN	filler	Filler	163	25	N	O			2.1	new	ok	cisac/cwr-functional-spec-2-2
+ORN	productionNumber	Production #	188	12	A	O			2.1	same	ok	cisac/cwr-functional-spec-2-2
+ORN	episodeTitle	Episode Title	200	60	A	O			2.1	same	ok	cisac/cwr-functional-spec-2-2
+ORN	episodeNumber	Episode #	260	20	A	O			2.1	same	ok	cisac/cwr-functional-spec-2-2
+ORN	yearOfProduction	Year of Production	280	4	N	O			2.1	same	ok	cisac/cwr-functional-spec-2-2
+ORN	aviSocietyCode	AVI Society Code	284	3	N	O			2.1	same	ok	cisac/cwr-functional-spec-2-2
+ORN	audioVisualNumber	Audio-Visual Number	287	15	A	O			2.1	same	ok	cisac/cwr-functional-spec-2-2
+ORN	vIsanIsan	ISAN	302	12	A	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+ORN	vIsanEpisode	Episode	314	4	A	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+ORN	vIsanCheckDigit1	Check Digit 1	318	1	A	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+ORN	vIsanVersion	Version	319	8	A	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+ORN	vIsanCheckDigit2	Check Digit 2	327	1	A	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+ORN	eidr	EIDR	328	21	A	O			2.2	new	aggregate	cisac/cwr-functional-spec-2-2
+ORN	eidrRootNumber	EIDR	328	20	A	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+ORN	eidrCheckDigit	Check Digit	348	1	A	O			2.2	new	ok	cisac/cwr-functional-spec-2-2
+INS	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+INS	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+INS	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+INS	numberOfVoices	Number of Voices	20	3	N	O			base	same	ok	cisac/cwr-functional-spec-2-2
+INS	standardInstrumentationType	Standard Instrumentation Type	23	3	L	C	standardInstrumentation		base	same	ok	cisac/cwr-functional-spec-2-2
+INS	instrumentationDescription	Instrumentation Description	26	50	A	C			base	same	ok	cisac/cwr-functional-spec-2-2
+IND	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+IND	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+IND	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+IND	instrumentCode	Instrument Code	20	3	L	M	instrument		base	same	ok	cisac/cwr-functional-spec-2-2
+IND	numberOfPlayers	Number of Players	23	3	N	O			base	same	ok	cisac/cwr-functional-spec-2-2
+COM	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+COM	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+COM	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+COM	title	Title	20	60	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+COM	iswcOfComponent	ISWC of Component	80	11	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+COM	submitterWorkNumber	Submitter Work #	91	14	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+COM	duration	Duration	105	6	T	O			base	same	ok	cisac/cwr-functional-spec-2-2
+COM	writer1LastName	Writer 1 Last Name	111	45	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+COM	writer1FirstName	Writer 1 First Name	156	30	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+COM	writer1IpiNameNumber	Writer 1 IPI Name #	186	11	L	O			base	same	ok	cisac/cwr-functional-spec-2-2
+COM	writer2LastName	Writer 2 Last Name	197	45	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+COM	writer2FirstName	Writer 2 First Name	242	30	A	O			base	same	ok	cisac/cwr-functional-spec-2-2
+COM	writer2IpiNameNumber	Writer 2 IPI Name #	272	11	L	O			base	same	ok	cisac/cwr-functional-spec-2-2
+COM	writer1IpiBaseNumber	Writer 1 IPI Base Number	283	13	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+COM	writer2IpiBaseNumber	Writer 2 IPI Base Number	296	13	L	O			2.0	same	ok	cisac/cwr-functional-spec-2-2
+MSG	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+MSG	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+MSG	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+MSG	messageType	Message Type	20	1	L	M	messageType		base	same	ok	cisac/cwr-functional-spec-2-2
+MSG	originalRecordSequenceNumber	Original Record Sequence #	21	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+MSG	originalRecordType	Record Type	29	3	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+MSG	messageLevel	Message Level	32	1	L	M	messageLevel		base	same	ok	cisac/cwr-functional-spec-2-2
+MSG	validationNumber	Validation Number	33	3	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+MSG	messageText	Message Text	36	150	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NET	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+NET	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NET	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NET	title	Title	20	640	A	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NET	languageCode	Language Code	660	2	L	O	languageCode		base	same	ok	cisac/cwr-functional-spec-2-2
+NOW	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+NOW	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NOW	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+NOW	writerName	Writer Name	20	160	A	M			base	same	ambiguous	cisac/cwr-functional-spec-2-2
+NOW	writerFirstName	Writer First Name	180	160	A	M			base	same	ambiguous	cisac/cwr-functional-spec-2-2
+NOW	languageCode	Language Code	340	2	L	O	languageCode		base	same	ok	cisac/cwr-functional-spec-2-2
+NOW	writerPosition	Writer Position	342	1	L	O			base	same	ok	cisac/cwr-functional-spec-2-2
+ARI	recordType	Record Type	1	3	L	M	recordType		base	same	ok	cisac/cwr-functional-spec-2-2
+ARI	transactionSequence	Transaction Sequence #	4	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+ARI	recordSequence	Record Sequence #	12	8	N	M			base	same	ok	cisac/cwr-functional-spec-2-2
+ARI	societyNumber	Society #	20	3	L	M	societyCode		base	same	ok	cisac/cwr-functional-spec-2-2
+ARI	workNumber	Work #	23	14	A	C			base	same	ok	cisac/cwr-functional-spec-2-2
+ARI	typeOfRight	Type of Right	37	3	L	M	typeOfRight		base	same	ok	cisac/cwr-functional-spec-2-2
+ARI	subjectCode	Subject Code	40	2	L	C	subjectCode		base	same	ok	cisac/cwr-functional-spec-2-2
+ARI	note	Note	42	160	A	C			base	same	ok	cisac/cwr-functional-spec-2-2
+XRF	recordType	Record Type	1	3	L	M	recordType		base	new	ok	cisac/cwr-functional-spec-2-2
+XRF	transactionSequence	Transaction Sequence #	4	8	N	M			base	new	ok	cisac/cwr-functional-spec-2-2
+XRF	recordSequence	Record Sequence #	12	8	N	M			base	new	ok	cisac/cwr-functional-spec-2-2
+XRF	organisationCode	Organisation Code	20	3	L	M	transmitterCode		base	new	ok	cisac/cwr-functional-spec-2-2
+XRF	identifier	Identifier	23	14	A	M			base	new	ok	cisac/cwr-functional-spec-2-2
+XRF	identifierType	Identifier Type	37	1	L	M	identifierType		base	new	ok	cisac/cwr-functional-spec-2-2
+XRF	validity	Validity	38	1	F	M			base	new	ok	cisac/cwr-functional-spec-2-2

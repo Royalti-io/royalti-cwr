@@ -1,0 +1,4 @@
+code	description	detail	scope	status	source
+MOV			crf020		cisac/cwr-lookup-tables-crf020
+UEX			crf020		cisac/cwr-lookup-tables-crf020
+[blank]			crf020		cisac/cwr-lookup-tables-crf020

@@ -1,0 +1,8 @@
+code	description	detail	scope	status	source
+ACK			crf020		cisac/cwr-lookup-tables-crf020
+AGR			crf020		cisac/cwr-lookup-tables-crf020
+NWR			crf020		cisac/cwr-lookup-tables-crf020
+REV			crf020		cisac/cwr-lookup-tables-crf020
+ISW			crf020		cisac/cwr-lookup-tables-crf020
+EXC			crf020		cisac/cwr-lookup-tables-crf020
+COP			crf020	retired	cisac/cwr-lookup-tables-crf020

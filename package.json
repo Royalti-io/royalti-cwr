@@ -1,0 +1,84 @@
+{
+  "name": "@royalti/cwr",
+  "version": "0.2.0",
+  "description": "Parse, check, edit and write CWR 2.1 / 2.2 files. Pure TypeScript, no dependencies, no I/O. No passages or quotations from the CISAC specifications.",
+  "keywords": [
+    "cwr",
+    "cisac",
+    "music-publishing",
+    "common-works-registration",
+    "parser",
+    "checker",
+    "linter"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Royalti-io/royalti-cwr"
+  },
+  "homepage": "https://github.com/Royalti-io/royalti-cwr#readme",
+  "bugs": {
+    "url": "https://github.com/Royalti-io/royalti-cwr/issues"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./lite": {
+      "import": {
+        "types": "./dist/lite.d.ts",
+        "default": "./dist/lite.js"
+      },
+      "require": {
+        "types": "./dist/lite.d.cts",
+        "default": "./dist/lite.cjs"
+      }
+    },
+    "./reference": {
+      "import": {
+        "types": "./dist/reference.d.ts",
+        "default": "./dist/reference.js"
+      },
+      "require": {
+        "types": "./dist/reference.d.cts",
+        "default": "./dist/reference.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "prebuild": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vitest run"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "eslint": "^10.13.0",
+    "fast-check": "^4.10.2",
+    "tsup": "^9.0.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.0",
+    "vitest": "^5.0.5"
+  }
+}

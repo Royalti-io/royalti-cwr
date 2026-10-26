@@ -1,0 +1,247 @@
+code	description	detail	scope	status	source
+000	DP		crf020		cisac/cwr-lookup-tables-crf020
+001	ACUM		crf020		cisac/cwr-lookup-tables-crf020
+002	ADDAF		crf020		cisac/cwr-lookup-tables-crf020
+003	AEPI		crf020		cisac/cwr-lookup-tables-crf020
+004	AGADU		crf020		cisac/cwr-lookup-tables-crf020
+005	AKM		crf020		cisac/cwr-lookup-tables-crf020
+006	BUCUDA		crf020		cisac/cwr-lookup-tables-crf020
+007	APDAYC		crf020		cisac/cwr-lookup-tables-crf020
+008	APRA		crf020		cisac/cwr-lookup-tables-crf020
+009	ARTISJUS		crf020		cisac/cwr-lookup-tables-crf020
+010	ASCAP		crf020		cisac/cwr-lookup-tables-crf020
+011	AUSTRO-MECHANA		crf020		cisac/cwr-lookup-tables-crf020
+012	AMCOS		crf020		cisac/cwr-lookup-tables-crf020
+013	AWA		crf020		cisac/cwr-lookup-tables-crf020
+014	ARGENTORES		crf020		cisac/cwr-lookup-tables-crf020
+015	APA		crf020		cisac/cwr-lookup-tables-crf020
+016	BUMDA		crf020		cisac/cwr-lookup-tables-crf020
+017	AMRA		crf020		cisac/cwr-lookup-tables-crf020
+018	BGDA		crf020		cisac/cwr-lookup-tables-crf020
+019	BMDA		crf020		cisac/cwr-lookup-tables-crf020
+020	SODRAC		crf020		cisac/cwr-lookup-tables-crf020
+021	BMI		crf020		cisac/cwr-lookup-tables-crf020
+022	MCSN		crf020		cisac/cwr-lookup-tables-crf020
+023	BUMA		crf020		cisac/cwr-lookup-tables-crf020
+024	BURIDA		crf020		cisac/cwr-lookup-tables-crf020
+025	BSDA		crf020		cisac/cwr-lookup-tables-crf020
+026	CASH		crf020		cisac/cwr-lookup-tables-crf020
+027	CAPAC		crf020		cisac/cwr-lookup-tables-crf020
+028	LITA		crf020		cisac/cwr-lookup-tables-crf020
+029	SCD		crf020		cisac/cwr-lookup-tables-crf020
+030	AMAR		crf020		cisac/cwr-lookup-tables-crf020
+031	DILIA		crf020		cisac/cwr-lookup-tables-crf020
+032	FILSCAP		crf020		cisac/cwr-lookup-tables-crf020
+033	OMDA		crf020		cisac/cwr-lookup-tables-crf020
+034	HARRY FOX AGENCY		crf020		cisac/cwr-lookup-tables-crf020
+035	GEMA		crf020		cisac/cwr-lookup-tables-crf020
+036	IPRS		crf020		cisac/cwr-lookup-tables-crf020
+037	BUBEDRA		crf020		cisac/cwr-lookup-tables-crf020
+038	JASRAC		crf020		cisac/cwr-lookup-tables-crf020
+039	MUSICAUTOR		crf020		cisac/cwr-lookup-tables-crf020
+040	KODA		crf020		cisac/cwr-lookup-tables-crf020
+041	LITERAR-MECHANA		crf020		cisac/cwr-lookup-tables-crf020
+042	LVG		crf020		cisac/cwr-lookup-tables-crf020
+043	MCSK		crf020		cisac/cwr-lookup-tables-crf020
+044	MCPS		crf020		cisac/cwr-lookup-tables-crf020
+045	BBDA		crf020		cisac/cwr-lookup-tables-crf020
+046	MRS		crf020		cisac/cwr-lookup-tables-crf020
+047	BCDA		crf020		cisac/cwr-lookup-tables-crf020
+048	NCB		crf020		cisac/cwr-lookup-tables-crf020
+049	ONDA		crf020		cisac/cwr-lookup-tables-crf020
+050	OSA		crf020		cisac/cwr-lookup-tables-crf020
+051	PROLITTERIS		crf020		cisac/cwr-lookup-tables-crf020
+052	PRS		crf020		cisac/cwr-lookup-tables-crf020
+053	PROCAN		crf020		cisac/cwr-lookup-tables-crf020
+054	ALCS		crf020		cisac/cwr-lookup-tables-crf020
+055	SABAM		crf020		cisac/cwr-lookup-tables-crf020
+056	SACD		crf020		cisac/cwr-lookup-tables-crf020
+057	SACERAU		crf020		cisac/cwr-lookup-tables-crf020
+058	SACEM		crf020		cisac/cwr-lookup-tables-crf020
+059	SACM		crf020		cisac/cwr-lookup-tables-crf020
+060	SACVEN		crf020		cisac/cwr-lookup-tables-crf020
+061	SADAIC		crf020		cisac/cwr-lookup-tables-crf020
+062	SADEMBRA		crf020		cisac/cwr-lookup-tables-crf020
+063	SAMRO		crf020		cisac/cwr-lookup-tables-crf020
+064	SOKOJ		crf020		cisac/cwr-lookup-tables-crf020
+065	SAYCE		crf020		cisac/cwr-lookup-tables-crf020
+066	SBACEM		crf020		cisac/cwr-lookup-tables-crf020
+067	SBAT		crf020		cisac/cwr-lookup-tables-crf020
+068	SDRM		crf020	retired	cisac/cwr-lookup-tables-crf020
+069	SPA		crf020		cisac/cwr-lookup-tables-crf020
+070	SOGEM		crf020		cisac/cwr-lookup-tables-crf020
+071	SESAC		crf020		cisac/cwr-lookup-tables-crf020
+072	SGAE		crf020		cisac/cwr-lookup-tables-crf020
+073	SCAM		crf020		cisac/cwr-lookup-tables-crf020
+074	SIAE		crf020		cisac/cwr-lookup-tables-crf020
+075	SUISSIMAGE		crf020		cisac/cwr-lookup-tables-crf020
+076	ACEMLA		crf020		cisac/cwr-lookup-tables-crf020
+077	STEF		crf020		cisac/cwr-lookup-tables-crf020
+078	STEMRA		crf020		cisac/cwr-lookup-tables-crf020
+079	STIM		crf020		cisac/cwr-lookup-tables-crf020
+080	SUISA		crf020		cisac/cwr-lookup-tables-crf020
+081	SARRAL		crf020		cisac/cwr-lookup-tables-crf020
+082	OTPDA		crf020		cisac/cwr-lookup-tables-crf020
+083	SONECA		crf020		cisac/cwr-lookup-tables-crf020
+084	SAYCO		crf020		cisac/cwr-lookup-tables-crf020
+085	SOZA		crf020		cisac/cwr-lookup-tables-crf020
+086	SICAM		crf020		cisac/cwr-lookup-tables-crf020
+087	SPACEMF		crf020		cisac/cwr-lookup-tables-crf020
+088	CMRRA		crf020		cisac/cwr-lookup-tables-crf020
+089	TEOSTO		crf020		cisac/cwr-lookup-tables-crf020
+090	TONO		crf020		cisac/cwr-lookup-tables-crf020
+091	SSA		crf020		cisac/cwr-lookup-tables-crf020
+092	SOCINADA		crf020		cisac/cwr-lookup-tables-crf020
+093	UBC		crf020		cisac/cwr-lookup-tables-crf020
+094	RAO		crf020		cisac/cwr-lookup-tables-crf020
+095	VG WORT		crf020		cisac/cwr-lookup-tables-crf020
+096	COTT		crf020		cisac/cwr-lookup-tables-crf020
+097	ZAIKS		crf020		cisac/cwr-lookup-tables-crf020
+098	ZIMRA		crf020		cisac/cwr-lookup-tables-crf020
+099	NS		crf020		cisac/cwr-lookup-tables-crf020
+101	SOCAN		crf020		cisac/cwr-lookup-tables-crf020
+102	NASCAM		crf020		cisac/cwr-lookup-tables-crf020
+103	ACDAM		crf020		cisac/cwr-lookup-tables-crf020
+104	MACP		crf020		cisac/cwr-lookup-tables-crf020
+105	MASA		crf020		cisac/cwr-lookup-tables-crf020
+106	COMPASS		crf020		cisac/cwr-lookup-tables-crf020
+107	ACAM		crf020		cisac/cwr-lookup-tables-crf020
+108	CHA		crf020		cisac/cwr-lookup-tables-crf020
+109	KCI		crf020		cisac/cwr-lookup-tables-crf020
+110	LATGA-A		crf020		cisac/cwr-lookup-tables-crf020
+111	HDS-ZAMP		crf020		cisac/cwr-lookup-tables-crf020
+112	SAZAS		crf020		cisac/cwr-lookup-tables-crf020
+113	LAA		crf020		cisac/cwr-lookup-tables-crf020
+114	AGAYC		crf020		cisac/cwr-lookup-tables-crf020
+115	UCMR-ADA		crf020		cisac/cwr-lookup-tables-crf020
+116	EAU		crf020		cisac/cwr-lookup-tables-crf020
+117	MESAM		crf020		cisac/cwr-lookup-tables-crf020
+118	KOMCA		crf020		cisac/cwr-lookup-tables-crf020
+119	MCSC		crf020		cisac/cwr-lookup-tables-crf020
+120	LIRA		crf020		cisac/cwr-lookup-tables-crf020
+121	VDFS		crf020		cisac/cwr-lookup-tables-crf020
+122	AKKA/LAA		crf020		cisac/cwr-lookup-tables-crf020
+123	COSGA		crf020		cisac/cwr-lookup-tables-crf020
+124	COSOMA		crf020		cisac/cwr-lookup-tables-crf020
+125	BNDA		crf020		cisac/cwr-lookup-tables-crf020
+126	MCT		crf020		cisac/cwr-lookup-tables-crf020
+127	ALBAUTOR		crf020		cisac/cwr-lookup-tables-crf020
+128	IMRO		crf020		cisac/cwr-lookup-tables-crf020
+129	SOBODAYCOM		crf020		cisac/cwr-lookup-tables-crf020
+130	BUTODRA		crf020		cisac/cwr-lookup-tables-crf020
+131	SADA		crf020		cisac/cwr-lookup-tables-crf020
+132	BILD-KUNST		crf020		cisac/cwr-lookup-tables-crf020
+133	ZAMCOPS		crf020		cisac/cwr-lookup-tables-crf020
+134	SLPRS		crf020		cisac/cwr-lookup-tables-crf020
+135	SADH		crf020		cisac/cwr-lookup-tables-crf020
+136	ZAMP		crf020		cisac/cwr-lookup-tables-crf020
+137	SOFAM		crf020		cisac/cwr-lookup-tables-crf020
+138	KOPIOSTO		crf020		cisac/cwr-lookup-tables-crf020
+139	COPY-DAN BILLEDKUNST		crf020		cisac/cwr-lookup-tables-crf020
+140	UACRR		crf020		cisac/cwr-lookup-tables-crf020
+141	ATN		crf020		cisac/cwr-lookup-tables-crf020
+142	DALRO		crf020		cisac/cwr-lookup-tables-crf020
+143	TEATERAUTOR		crf020		cisac/cwr-lookup-tables-crf020
+144	HAA		crf020		cisac/cwr-lookup-tables-crf020
+145	DPRS		crf020		cisac/cwr-lookup-tables-crf020
+146	SPAC		crf020		cisac/cwr-lookup-tables-crf020
+147	FILMAUTOR		crf020		cisac/cwr-lookup-tables-crf020
+148	ADAGP		crf020		cisac/cwr-lookup-tables-crf020
+149	ARS		crf020		cisac/cwr-lookup-tables-crf020
+150	BEELDRECHT		crf020		cisac/cwr-lookup-tables-crf020
+151	BONO		crf020		cisac/cwr-lookup-tables-crf020
+152	BUS		crf020		cisac/cwr-lookup-tables-crf020
+153	DACS		crf020		cisac/cwr-lookup-tables-crf020
+154	HUNGART		crf020		cisac/cwr-lookup-tables-crf020
+155	SOMAAP		crf020		cisac/cwr-lookup-tables-crf020
+156	VAGA		crf020		cisac/cwr-lookup-tables-crf020
+157	VBK		crf020		cisac/cwr-lookup-tables-crf020
+158	VEGAP		crf020		cisac/cwr-lookup-tables-crf020
+159	VISCOPY		crf020		cisac/cwr-lookup-tables-crf020
+160	RUPIS		crf020		cisac/cwr-lookup-tables-crf020
+161	MUST		crf020		cisac/cwr-lookup-tables-crf020
+162	AMPAL		crf020		cisac/cwr-lookup-tables-crf020
+163	APG-JAPAN		crf020		cisac/cwr-lookup-tables-crf020
+164	APSAV		crf020		cisac/cwr-lookup-tables-crf020
+165	ATN		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+166	AUTORARTE		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+167	BURAFO		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+168	CAL		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+169	COSCAP		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+170	CPSN		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+171	CREAIMAGEN		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+172	DGA		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+173	DIRECTORES		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+174	FLIM JUS		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+175	COPYRO		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+176	JACAP		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+177	KAZAK		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+178	KOSA		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+179	KUVASTO		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+180	MUSIKEDITION		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+181	NMPA		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+182	PAPPRI		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+183	SACK		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+184	SARTEC		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+185	SESAM		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+186	SGDL		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+187	SNAC		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+188	SOCIETE DE L’IMAGE		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+189	SOCINPRO		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+190	SOPE		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+191	SPACQ		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+192	SFF		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+193	THE SOCIETY OF AUTHORS		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+194	UFFICIO LEGALE		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+195	VEVAM		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+196	WGA		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+197	WGJ		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+198	ZAMP		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+199	ZAPA		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+200	MSG		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+201	ABRAMUS		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+202	ASDAC		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+203	AWGACS		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+204	SAS		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+205	SODART		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+206	SUOMEN KIRJAILIJALIITTO		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+207	THE AUTHOR'S REGISTRY INC.		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+208	SGA		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+209	ARMAUTHOR		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+210	ACCESS		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+211			crf020	retired autonumbered	cisac/cwr-lookup-tables-crf020
+212	CSCS		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+213	DRCC		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+214	HMS		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+215	KYRGYZPATENT		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+216	SQN		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+217	ABRAC		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+218	ANACIM		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+219	ASSIM		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+220	ATIDA		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+221	SABEM		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+222	FONOPERU		crf020	autonumbered	cisac/cwr-lookup-tables-crf020
+223	COSOTA		crf020		cisac/cwr-lookup-tables-crf020
+224	SOMAS		crf020		cisac/cwr-lookup-tables-crf020
+225	SAIF		crf020		cisac/cwr-lookup-tables-crf020
+226	AACIMH		crf020		cisac/cwr-lookup-tables-crf020
+227	SGACEDOM		crf020		cisac/cwr-lookup-tables-crf020
+228	ROMS		crf020		cisac/cwr-lookup-tables-crf020
+229	ICG		crf020		cisac/cwr-lookup-tables-crf020
+230	ADAVIS		crf020		cisac/cwr-lookup-tables-crf020
+231	AUTVIS		crf020		cisac/cwr-lookup-tables-crf020
+232	GESTOR		crf020		cisac/cwr-lookup-tables-crf020
+233	SACEMLUXEMBOURG		crf020		cisac/cwr-lookup-tables-crf020
+234	UCOSO		crf020		cisac/cwr-lookup-tables-crf020
+235	SACENC		crf020		cisac/cwr-lookup-tables-crf020
+300	WID CENTRE		crf020		cisac/cwr-lookup-tables-crf020
+301	GESAC		crf020		cisac/cwr-lookup-tables-crf020
+302	LATINAUTOR		crf020		cisac/cwr-lookup-tables-crf020
+303	NORD-DOC		crf020		cisac/cwr-lookup-tables-crf020
+304	SONGCODE		crf020		cisac/cwr-lookup-tables-crf020
+305	IMJV		crf020		cisac/cwr-lookup-tables-crf020
+306	CCL		crf020		cisac/cwr-lookup-tables-crf020
+307	MISASIA		crf020		cisac/cwr-lookup-tables-crf020
+308	ECAD		crf020		cisac/cwr-lookup-tables-crf020
+309	LATINNET		crf020		cisac/cwr-lookup-tables-crf020
+310	DIVA		crf020		cisac/cwr-lookup-tables-crf020
