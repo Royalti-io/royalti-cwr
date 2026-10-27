@@ -96,9 +96,9 @@ describe('package.json', () => {
     }
   });
 
-  it('is public version 0.2.0 with its repository set, ships dist, the licence and the readme, and has no dependencies', () => {
+  it('is public version 0.3.1 with its repository set, ships dist, the licence and the readme, and has no dependencies', () => {
     expect(pkg.name).toBe('@royalti/cwr');
-    expect(pkg.version).toBe('0.2.0');
+    expect(pkg.version).toBe('0.3.1');
     expect(pkg.private).toBeUndefined();
     expect(pkg.repository).toEqual({ type: 'git', url: 'https://github.com/Royalti-io/royalti-cwr' });
     expect(pkg.license).toBe('MIT');

@@ -7,7 +7,7 @@ export type { CwrVersion };
 
 export { parse, parseSteps, DEFAULT_LAYOUTS } from './model/parse';
 export { CancelledError, createCancelToken, throwIfCancelled } from './model/progress';
-export type { CancelSignal, CancelToken, Progress, RunOptions } from './model/progress';
+export type { CancelSignal, CancelToken, Progress, ProgressTask, RunOptions } from './model/progress';
 export { sniff } from './model/sniff';
 export type { SniffKind, SniffOptions, SniffReason, SniffResult } from './model/sniff';
 export { buildStructure, getWorkView, TXN_HEADERS, WORK_HEADERS, CONTROL_TYPES } from './model/group';
@@ -63,3 +63,4 @@ export type {
   SpecAction,
   Span,
 } from './rules/index';
+export * from './tools/index';

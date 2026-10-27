@@ -133,7 +133,7 @@ const file4 = defineRule({
   versions: BOTH,
   specAction: 'ER',
   cisac: 'FIL E 004',
-  message: 'This GRH follows a {found} record; every GRH after the first must follow a GRT.',
+  message: 'This GRH follows a record of type {found}; every GRH after the first must follow a GRT.',
   source: { slug: S21, quote: '' },
   alsoSource: [{ slug: S22, quote: '' }],
   run(ctx) {
@@ -412,7 +412,7 @@ const nwrT008 = defineRule({
   records: ['TER', 'IPA', 'NPA', 'SPU', 'OPU', 'NPN', 'SPT', 'OPT', 'SWR', 'OWR', 'NWN', 'SWT', 'OWT', 'PWR', 'ALT', 'NAT', 'EWT', 'VER', 'PER', 'NPR', 'REC', 'ORN', 'INS', 'IND', 'COM', 'MSG', 'NET', 'NCT', 'NVT', 'NOW', 'ARI', 'XRF'],
   specAction: 'RR',
   cisac: 'NWR T 008',
-  message: '{type} is not in the Transaction Format table of a {header} transaction.',
+  message: '{type} is not in the Transaction Format table of {header} transactions.',
   source: { slug: S21, quote: '' },
   alsoSource: [{ slug: S22, quote: '' }],
   run(ctx) {

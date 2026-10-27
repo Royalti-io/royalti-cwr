@@ -388,7 +388,7 @@ describe('versions', () => {
     expect(r.problems.some(p => p.ruleId === 'STR-F-001')).toBe(true);
     const v = r.problems.find(p => p.ruleId === 'VER-002')!;
     expect(v.severity).toBe('warning');
-    expect(v.message).toContain('OPT record');
+    expect(v.message).toContain('an OPT record (a record type of CWR 2.2 only)');
     expect(v.message).toContain('check it again as 2.2');
   });
 

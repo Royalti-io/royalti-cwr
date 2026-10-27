@@ -89,6 +89,62 @@ describe('progress and cancel (CR-5)', () => {
     expect(a.file).toEqual(b.file);
   });
 
+  it('a file over a megabyte in a single-byte encoding reports while it is decoded, and the document is the same', () => {
+    const big = synth(2000, '2.2', true);
+    expect(big.length).toBeGreaterThan(2 * (1 << 20));
+    const seen: Progress[] = [];
+    const doc = parse(big, { onProgress: p => seen.push({ ...p }) });
+    const reads = seen.filter(p => p.stage === 'read');
+    expect(reads.length).toBeGreaterThanOrEqual(3);
+    expect(reads.map(p => p.done)).toEqual(reads.map((_, i) => Math.min(i * (1 << 20), big.length)));
+    for (const p of reads) {
+      expect(p.total).toBe(big.length);
+      expect(p.fraction).toBeLessThan(0.4);
+    }
+    expect(seen.map(p => p.fraction)).toEqual([...seen.map(p => p.fraction)].sort((x, y) => x - y));
+    // The first line report comes after the last read report.
+    expect(seen.findIndex(p => p.stage === 'lines')).toBe(reads.length);
+    // Pieces are joined without loss: the line that spans the first piece boundary reads as the bytes say, and the lines tile the bytes.
+    expect(doc.encoding).toBe('ascii');
+    const across = doc.lines.find(l => l.byteStart < 1 << 20 && l.byteEnd > 1 << 20)!;
+    expect(across.text).toBe(Buffer.from(big.subarray(across.byteStart, across.byteStart + across.text.length)).toString('latin1'));
+    expect(doc.lines.reduce((n, l) => n + (l.byteEnd - l.byteStart), 0)).toBe(big.length);
+    expect(doc.lines.map(l => l.text).join('\r\n') + '\r\n').toBe(Buffer.from(big).toString('latin1'));
+  });
+
+  it('a single-byte file with accented letters on both sides of a piece boundary decodes to the letters', () => {
+    const big = synth(2000, '2.2', true).slice();
+    big[(1 << 20) - 1] = 0xe9;
+    big[1 << 20] = 0xf1;
+    big[2 * (1 << 20) + 5] = 0xdf;
+    const doc = parse(big);
+    expect(doc.encoding).toBe('latin1');
+    const text = Buffer.from(big).toString('latin1');
+    expect(doc.lines.map(l => l.text).join('\r\n') + '\r\n').toBe(text);
+  });
+
+  it('a file under a megabyte reports its start as before: one read report', () => {
+    const seen: Progress[] = [];
+    parse(synth(100), { onProgress: p => seen.push({ ...p }) });
+    expect(seen.filter(p => p.stage === 'read')).toEqual([{ task: 'parse', stage: 'read', done: 0, total: synth(100).length, fraction: 0 }]);
+  });
+
+  it('a large file can be stopped while it is decoded, before the first line is cut', () => {
+    const big = synth(2000, '2.2', true);
+    const token = createCancelToken();
+    const stages: string[] = [];
+    expect(() =>
+      parse(big, {
+        signal: token.signal,
+        onProgress: p => {
+          stages.push(p.stage);
+          if (p.stage === 'read' && p.done > 0) token.cancel();
+        },
+      }),
+    ).toThrow(CancelledError);
+    expect(stages).toEqual(['read', 'read']);
+  });
+
   it('a signal that is already aborted stops both before any work', () => {
     const token = createCancelToken();
     token.cancel();

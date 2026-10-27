@@ -1,3 +1,4 @@
+import { withArticle } from '../../model/article';
 import { findField, lineText } from '../../model/fields';
 import { S21, S22 } from '../locate';
 import { defineRule } from '../registry';
@@ -156,7 +157,7 @@ const ver002 = defineRule({
           case 'OPT':
           case 'OWT':
           case 'XRF':
-            evidence.push({ line: rec.line, what: `a ${rec.type} record (a record type of CWR 2.2 only)` });
+            evidence.push({ line: rec.line, what: `${withArticle(rec.type)} record (a record type of CWR 2.2 only)` });
             break;
           default:
         }

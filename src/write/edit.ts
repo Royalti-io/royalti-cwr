@@ -7,7 +7,7 @@ import type { CwrDoc, FieldDef, RecRef } from '../model/types';
 export interface SetFieldOptions {
   /** Longer than the field: refuse (default) or cut to fit. Numeric fields are always refused. */
   overflow?: 'refuse' | 'truncate';
-  /** Upper-case text fields before writing. */
+  /** Upper-case text fields before writing. Refused (`uppercase-script`) when that would turn a letter into one of another script. */
   uppercase?: boolean;
 }
 
@@ -28,6 +28,16 @@ export interface SetFieldResult {
 }
 
 const NUMERIC = new Set<FieldDef['format']>(['N', 'D', 'T']);
+
+/** The scripts upper case can move a letter into. A letter in none of them is Common, Inherited or in a script with no such move. */
+const SCRIPTS = [/\p{Script=Latin}/u, /\p{Script=Greek}/u, /\p{Script=Cyrillic}/u];
+
+/**
+ * True when upper case would move a letter of `text` into a script it is not in: the micro sign becomes a Greek capital mu, a combining
+ * mark becomes a Greek letter. A letter that stays in its script (`é`, `ÿ`, `ß` as `SS`) is not a move.
+ */
+export const crossesScript = (text: string): boolean =>
+  [...text].some(ch => ch.charCodeAt(0) > 127 && SCRIPTS.some(script => script.test(ch.toUpperCase()) && !script.test(ch)));
 
 /** Fixed-width padding by field type: digits right-justified and zero-filled, text left-justified and space-padded. */
 function pad(field: FieldDef, value: string, options: SetFieldOptions): { text: string; truncated: boolean } {
@@ -74,8 +84,9 @@ export function setField(
 
   const { text: padded, truncated } = pad(field, value, options);
   if (!encodeText(padded, doc.encoding)) {
-    throw new EditError('not-encodable', `"${value}" cannot be written in a ${doc.encoding} file.`);
+    throw new EditError('not-encodable', `"${value}" cannot be written in this file's ${doc.encoding} encoding.`);
   }
+  if (options.uppercase && crossesScript(value)) throw new EditError('uppercase-script', `Upper case would move a letter of "${value}" into another script.`);
 
   const current = recordText(doc, ref);
   const head = current.length < field.start ? current.padEnd(field.start, ' ') : current.slice(0, field.start);

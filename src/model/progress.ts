@@ -15,12 +15,19 @@ export interface CancelSignal {
   readonly aborted: boolean;
 }
 
+/** The long-running jobs that report progress. The last four are the fix tools (`extractWorksSteps` and the other `...Steps` generators). */
+export type ProgressTask = 'parse' | 'check' | 'extract' | 'works-csv' | 'owned-shares' | 'duplicates';
+
 /** A progress report. Reports come at most every few thousand lines or records, never per line. */
 export interface Progress {
-  task: 'parse' | 'check';
-  /** The step in progress: `read`, `lines`, `records`, `structure` for parse; `file`, `groups`, `transactions`, `records` for check. */
+  task: ProgressTask;
+  /**
+   * The step in progress: `read`, `lines`, `records`, `structure` for parse; `file`, `groups`, `transactions`, `records` for check;
+   * `build`, `reparse`, `structure`, `bodies` for extract; `works`, `rows` for the works CSV; `works` for owned shares;
+   * `works`, `groups` for duplicates.
+   */
   stage: string;
-  /** Work done and work in this stage (bytes for `lines`, lines or records for the others). */
+  /** Work done and work in this stage (bytes for `lines`, lines or records for the others; thousandths for extract's `reparse` and `structure`). */
   done: number;
   total: number;
   /** 0 to 1 across the whole task, safe to hand to a progress bar. Never goes down. */

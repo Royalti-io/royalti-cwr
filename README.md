@@ -5,6 +5,7 @@ Parse, check, edit and write CWR 2.1 and 2.2 files. TypeScript, no dependencies,
 - **Parse** a file into a model that keeps every byte, damaged lines included.
 - **Check** it against 172 rules. Each problem names the line, the exact characters, a plain message and the rule id.
 - **Edit** single fields and **serialize** the file again. A file you did not edit comes back byte for byte.
+- **Fix tools** on top of that: clean identifiers, find and replace in titles and names, flag duplicate works, extract chosen works into a new file, work out owned shares, and write a works list as CSV. See [docs/TOOLS.md](https://github.com/Royalti-io/royalti-cwr/blob/main/docs/TOOLS.md).
 
 It runs in Node, in a browser and in a web worker. It is the engine behind the Royalti CWR checker.
 
@@ -34,7 +35,7 @@ for (const p of result.problems) {
 const same = serialize(doc);         // the original bytes, unless you edited the document
 ```
 
-`parse` reads CWR 2.1 and 2.2 and detects the version. `check` runs every rule that applies to it. `serialize` writes the file back; `setField` and `renumber` change a field and the group and file counts. The rest of the API (field information, per-work share summaries, progress and cancel, sniffing a file before parsing) is in [docs/API.md](https://github.com/Royalti-io/royalti-cwr/blob/main/docs/API.md).
+`parse` reads CWR 2.1 and 2.2 and detects the version. `check` runs every rule that applies to it. `serialize` writes the file back; `setField` and `renumber` change a field and the group and file counts. The fix tools (`cleanIdentifiers`, `findReplace`, `findDuplicates`, `extractWorks`, `ownedShares`, `worksCsv`) are described in [docs/TOOLS.md](https://github.com/Royalti-io/royalti-cwr/blob/main/docs/TOOLS.md). The rest of the API (field information, per-work share summaries, progress and cancel, sniffing a file before parsing) is in [docs/API.md](https://github.com/Royalti-io/royalti-cwr/blob/main/docs/API.md).
 
 ### What a result means
 

@@ -1,6 +1,6 @@
 {
   "name": "@royalti/cwr",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "description": "Parse, check, edit and write CWR 2.1 / 2.2 files. Pure TypeScript, no dependencies, no I/O. No passages or quotations from the CISAC specifications.",
   "keywords": [
     "cwr",

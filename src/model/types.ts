@@ -184,7 +184,7 @@ export class InputTooLargeError extends Error {
 
 /** A caller error in `setField` (unknown field, bad value, overflow). Never raised by `parse`. */
 export class EditError extends Error {
-  readonly code: 'unknown-record' | 'unknown-field' | 'invalid-value' | 'overflow' | 'not-encodable';
+  readonly code: 'unknown-record' | 'unknown-field' | 'invalid-value' | 'overflow' | 'not-encodable' | 'uppercase-script';
   constructor(code: EditError['code'], message: string) {
     super(message);
     this.name = 'EditError';

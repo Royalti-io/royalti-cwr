@@ -25,6 +25,8 @@ export const DEFAULT_LAYOUTS: LayoutProvider = specLayouts;
 
 /** Lines between two progress reports (and two cancel checks). */
 const STEP = 4096;
+/** Bytes decoded between two reports for a single-byte file. */
+const DECODE_CHUNK = 1 << 20;
 
 /** Reports one step: checks the signal, calls the callback, checks again, and returns the value the generator yields. */
 function progressOf(stage: string, done: number, total: number, from: number, to: number, options: RunOptions): Progress {
@@ -86,10 +88,18 @@ export function* parseSteps(bytes: Uint8Array, options: ParseOptions = {}): Gene
  * BOM exactly; an empty file has no lines, and a final newline does not create an empty last line.
  */
 function* splitLines(bytes: Uint8Array, bodyStart: number, encoding: CwrDoc['encoding'], options: RunOptions): Generator<Progress, Line[], void> {
-  // Single-byte encodings are decoded once and sliced: character offsets equal byte offsets.
-  const whole = encoding === 'utf8' ? null : decodeSingleByte(bytes);
-  const lines: Line[] = [];
   const n = bytes.length;
+  // Single-byte encodings are decoded once and sliced: character offsets equal byte offsets. The decode is done a megabyte at a
+  // time with a report between pieces, so a host can stop a large file before the first line is cut.
+  let whole: string | null = null;
+  if (encoding !== 'utf8') {
+    whole = '';
+    for (let from = 0; from < n; from += DECODE_CHUNK) {
+      if (from > 0) yield progressOf('read', from, n, 0, 0.4, options);
+      whole += decodeSingleByte(bytes, from, Math.min(from + DECODE_CHUNK, n));
+    }
+  }
+  const lines: Line[] = [];
   let start = bodyStart;
   let i = bodyStart;
   while (i < n) {

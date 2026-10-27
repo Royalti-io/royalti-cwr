@@ -122,6 +122,24 @@ describe('setField: edit locality', () => {
     expect(equalBytes(serialize(doc), expected)).toBe(true);
   });
 
+  it('upper case that would turn a letter into one of another script is refused, and nothing is written', () => {
+    const nwr = 'NWR0000000000000000' + '5 µs café'.padEnd(60, ' ') + 'EN' + 'W1'.padEnd(14, ' ');
+    const doc = parse(new Uint8Array(Buffer.from(nwr + '\n', 'utf8')));
+    expect(doc.encoding).toBe('utf8');
+    let error: unknown;
+    try {
+      setField(doc, 0, 'workTitle', '5 µs café', { uppercase: true });
+    } catch (e) {
+      error = e;
+    }
+    expect(error).toBeInstanceOf(EditError);
+    expect((error as EditError).code).toBe('uppercase-script');
+    expect(doc.edits.size).toBe(0);
+    // Ordinary Latin upper case is written, and without the option the micro sign is written as given.
+    expect(setField(doc, 0, 'workTitle', 'café ÿ ß', { uppercase: true }).after.trimEnd()).toBe('CAFÉ Ÿ SS');
+    expect(setField(doc, 0, 'workTitle', '5 µs café').after.trimEnd()).toBe('5 µs café');
+  });
+
   it('works on UTF-8 and Latin-1 files without disturbing multi-byte text elsewhere on the line', () => {
     const nwr = 'NWR0000000000000000' + 'CAFÉ ÉTÉ'.padEnd(60, ' ') + 'EN' + 'W1'.padEnd(14, ' ');
     const utf8 = new Uint8Array([...new Uint8Array(Buffer.from(nwr + '\n', 'utf8'))]);
