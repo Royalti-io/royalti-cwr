@@ -41,6 +41,33 @@ const same = serialize(doc);         // the original bytes, unless you edited th
 
 The package never calls a file "valid". It reports the problems it found in the checks it ran. The summary text is `No problems found in N checks` or `P problems in N checks: E errors, W warnings` (`1 problem`, `1 error` and `1 warning` in the singular); the test sample in this repository gives `516 problems in 64,107 checks: 24 errors, 492 warnings`, and a clean generated file gives `No problems found in 1,531 checks`. **A clean result is not a registration.** Societies apply their own rules, and the checks that need a society or CISAC database (IPI lookups, agreements on file) are not run.
 
+## Build a file from a spreadsheet
+
+`buildDoc` writes a CWR 2.2 file from the rows of one spreadsheet. The sheet has a "Row type" column (WORK, WRITER, PUBLISHER, ALT TITLE, PERFORMER, RECORDING), a "Work number" that ties each row to its work, and shares as plain percentages such as 33.33. `templateCsv()` gives the blank template, `exampleCsv()` a filled one with invented people, and `TEMPLATE_COLUMNS` says what every column is for.
+
+```ts
+import { parseCsv, readTemplateRows, checkRows, buildDoc, BuildError } from '@royalti/cwr/build';
+import { check } from '@royalti/cwr/lite';
+
+const sheet = readTemplateRows(parseCsv(csvText));         // csvText: the filled-in template
+const problems = [...sheet.problems, ...checkRows(sheet.rows)];
+// Each problem: { row, column, severity: 'error' | 'warning', code, message }. Row 1 is the header row.
+
+if (!problems.some(p => p.severity === 'error')) {
+  const { doc, text } = buildDoc(sheet.rows, {
+    senderType: 'PB',
+    senderId: 'YOUR_CODE',        // replace with the sender code your society or administrator gave you: the package never makes one up; an empty or all-zero code is refused
+    senderName: 'Your Company',
+    creationDate: '20261029',     // dates and times come from you: the package reads no clock
+    creationTime: '120000',
+    transmissionDate: '20261029',
+  });
+  console.log(check(doc).summary.text);                   // run the checker on what was built
+}
+```
+
+`buildDoc` throws a `BuildError` that lists the problems when the rows or the sender details have errors. The group and file records and all their counts and sequence numbers come from the package, not from the sheet. Text is written in capitals and cut to the field width. It writes CWR 2.2 only. The built file is checked by the same rules as any other, and a clean result is still not a registration.
+
 ## Entry points
 
 | Import | What it is |

@@ -12,8 +12,8 @@ export interface Bundled {
 }
 
 /** Bundles one entry of src/ in memory the way tsup does, and imports it. */
-export async function bundleEntry(entry: 'lite' | 'index' | 'reference'): Promise<Bundled> {
-  const file = entry === 'reference' ? 'src/reference/index.ts' : `src/${entry}.ts`;
+export async function bundleEntry(entry: 'lite' | 'index' | 'reference' | 'build'): Promise<Bundled> {
+  const file = entry === 'reference' ? 'src/reference/index.ts' : entry === 'build' ? 'src/build/index.ts' : `src/${entry}.ts`;
   const built = await build({
     entryPoints: [resolve(root, file)],
     bundle: true,

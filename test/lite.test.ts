@@ -13,10 +13,11 @@ beforeAll(async () => {
 // In this package the lite entry and the full entry carry the same data (neither has specification text). The lite entry stays so
 // a page can keep importing `@royalti/cwr/lite` in a worker; these tests keep it equal to the full entry.
 describe('the lite entry', () => {
-  it('exports the full API except the lookup label functions', () => {
+  it('exports the full API except the lookup label functions and the builder', () => {
     const fullKeys = Object.keys(full).sort();
     const liteKeys = Object.keys(lite.mod).sort();
-    expect(fullKeys.filter(k => !liteKeys.includes(k))).toEqual(['lookupLabel', 'lookupRow']);
+    const builder = ['BuildError', 'COLUMN_KEYS', 'EXAMPLE_ROWS', 'ROW_TYPES', 'TEMPLATE_COLUMNS', 'TEMPLATE_HEADERS', 'buildDoc', 'checkHeader', 'checkRows', 'cleanCell', 'exampleCsv', 'formatCsv', 'formatRowProblem', 'parseCsv', 'readTemplateRows', 'rowsCsv', 'templateCsv', 'templateRow'];
+    expect(fullKeys.filter(k => !liteKeys.includes(k))).toEqual([...builder, 'lookupLabel', 'lookupRow'].sort());
     expect(liteKeys.filter(k => !fullKeys.includes(k))).toEqual([]);
   });
 

@@ -1,6 +1,6 @@
 # API
 
-Everything below is pure: no host globals, no I/O. Version 0.3.1. Rule ids, field ids and lookup table ids are the keys; a miss returns `undefined` and never throws.
+Everything below is pure: no host globals, no I/O. Version 0.4.0. Rule ids, field ids and lookup table ids are the keys; a miss returns `undefined` and never throws.
 
 ## Entry points
 

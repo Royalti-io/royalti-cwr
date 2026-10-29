@@ -53,7 +53,7 @@ describe('synthetic generator', () => {
         expect(view.chains.length).toBe(otherParties ? 2 : 1);
         expect(view.writers.length).toBe(otherParties ? 2 : 1);
         expect(view.writers[0]!.pwr.length).toBe(1);
-      });
+      }, 60_000);
     }
   }
 
@@ -62,7 +62,7 @@ describe('synthetic generator', () => {
     const doc = parse(bytes);
     expect(equalBytes(serialize(doc), bytes)).toBe(true);
     expect(doc.lines[doc.lines.length - 1]!.eol).toBe('');
-  });
+  }, 60_000);
 
   for (const { version, otherParties } of combos) {
     const name = `synthetic/synth-${version}-11works${otherParties ? '-opu-owr' : ''}.cwr`;

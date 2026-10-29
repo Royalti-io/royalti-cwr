@@ -86,9 +86,9 @@ describe('reference data', () => {
 describe('package.json', () => {
   const pkg = JSON.parse(readFileSync(fileURLToPath(new URL('../package.json', import.meta.url)), 'utf8'));
 
-  it('exports the full, lite and reference builds with types for both module systems', () => {
-    expect(Object.keys(pkg.exports).sort()).toEqual(['.', './lite', './package.json', './reference']);
-    for (const [key, name] of [['.', 'index'], ['./lite', 'lite'], ['./reference', 'reference']] as const) {
+  it('exports the full, build, lite and reference builds with types for both module systems', () => {
+    expect(Object.keys(pkg.exports).sort()).toEqual(['.', './build', './lite', './package.json', './reference']);
+    for (const [key, name] of [['.', 'index'], ['./build', 'build'], ['./lite', 'lite'], ['./reference', 'reference']] as const) {
       expect(pkg.exports[key]).toEqual({
         import: { types: `./dist/${name}.d.ts`, default: `./dist/${name}.js` },
         require: { types: `./dist/${name}.d.cts`, default: `./dist/${name}.cjs` },
@@ -96,9 +96,9 @@ describe('package.json', () => {
     }
   });
 
-  it('is public version 0.3.1 with its repository set, ships dist, the licence and the readme, and has no dependencies', () => {
+  it('is public version 0.4.0 with its repository set, ships dist, the licence and the readme, and has no dependencies', () => {
     expect(pkg.name).toBe('@royalti/cwr');
-    expect(pkg.version).toBe('0.3.1');
+    expect(pkg.version).toBe('0.4.0');
     expect(pkg.private).toBeUndefined();
     expect(pkg.repository).toEqual({ type: 'git', url: 'https://github.com/Royalti-io/royalti-cwr' });
     expect(pkg.license).toBe('MIT');

@@ -1,6 +1,6 @@
 {
   "name": "@royalti/cwr",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Parse, check, edit and write CWR 2.1 / 2.2 files. Pure TypeScript, no dependencies, no I/O. No passages or quotations from the CISAC specifications.",
   "keywords": [
     "cwr",
@@ -44,6 +44,16 @@
       "require": {
         "types": "./dist/lite.d.cts",
         "default": "./dist/lite.cjs"
+      }
+    },
+    "./build": {
+      "import": {
+        "types": "./dist/build.d.ts",
+        "default": "./dist/build.js"
+      },
+      "require": {
+        "types": "./dist/build.d.cts",
+        "default": "./dist/build.cjs"
       }
     },
     "./reference": {
