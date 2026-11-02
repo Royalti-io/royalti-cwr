@@ -7,7 +7,7 @@ Parse, check, edit and write CWR 2.1 and 2.2 files. TypeScript, no dependencies,
 - **Edit** single fields and **serialize** the file again. A file you did not edit comes back byte for byte.
 - **Fix tools** on top of that: clean identifiers, find and replace in titles and names, flag duplicate works, extract chosen works into a new file, work out owned shares, and write a works list as CSV. See [docs/TOOLS.md](https://github.com/Royalti-io/royalti-cwr/blob/main/docs/TOOLS.md).
 
-It runs in Node, in a browser and in a web worker. It is the engine behind the Royalti CWR checker.
+It runs in Node, in a browser and in a web worker. It is the engine behind the Royalti [CWR checker](https://royalti.io/tools/cwr-checker) and [CWR creator](https://royalti.io/tools/cwr-creator). Try either in your browser: your file is never uploaded.
 
 ## Install
 
